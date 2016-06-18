@@ -61,11 +61,7 @@ public struct Queue<T> {
   }
   
   public mutating func dequeue() -> T? {
-    if isEmpty {
-      return nil
-    } else {
-      return array.removeFirst()
-    }
+    return array.popFirst()
   }
   
   public func peek() -> T? {
